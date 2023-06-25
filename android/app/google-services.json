@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "338032851928",
+    "project_id": "homefood-3bdae",
+    "storage_bucket": "homefood-3bdae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338032851928:android:aeee8839b53e077c68d0ad",
+        "android_client_info": {
+          "package_name": "com.homie.addycreates"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338032851928-4b2p38rc0rcuvro87qb8c30oe3pt87s5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.homie.addycreates",
+            "certificate_hash": "40eeebe1d87507e4213328921301bfe010014a94"
+          }
+        },
+        {
+          "client_id": "338032851928-30iddorn6g3ua5fu8ve35criol4j49n5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWFhLv2Rj9N6As35UGkLt9QI-9tr7NDIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338032851928-30iddorn6g3ua5fu8ve35criol4j49n5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
