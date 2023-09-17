@@ -97,7 +97,7 @@ class StoreDetailScreen extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              '\$' +
+                              '\₹' +
                                   " " +
                                   productData['productPrice']
                                       .toStringAsFixed(2),

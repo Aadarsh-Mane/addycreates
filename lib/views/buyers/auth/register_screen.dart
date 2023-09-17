@@ -3,6 +3,7 @@
 import 'package:addycreates/controllers/auth_controller.dart';
 import 'package:addycreates/utils/show_SnackBar.dart';
 import 'package:addycreates/views/buyers/auth/login_screen.dart';
+import 'package:addycreates/views/buyers/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -39,6 +40,13 @@ class _BuyerRegisterScreenState extends State<BuyerRegisterScreen> {
           _isLoading = false;
         });
       });
+      // Navigate to MainScreen after successful registration
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (BuildContext context) {
+          return MainScreen();
+        }),
+      );
       return showSnack(context, 'account has been created');
     } else {
       setState(() {

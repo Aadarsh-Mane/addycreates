@@ -77,13 +77,15 @@ class MainProductsWidget extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            '\$' +
+                            // '\$' +
+                            //     "" +
+                            productData['productPrice'].toStringAsFixed(2) +
                                 " " +
-                                productData['productPrice'].toStringAsFixed(2),
+                                "ruppee",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
-                              letterSpacing: 4,
+                              letterSpacing: 3,
                               color: Colors.yellow.shade900,
                             ),
                           ),

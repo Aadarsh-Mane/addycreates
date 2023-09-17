@@ -37,6 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
   String email = '';
 
   String password = '';
+
   @override
   void initState() {
     super.initState();
@@ -112,21 +113,25 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Form(
         key: _formKey,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Login Customer"s Account',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              'Login Customer\'s Account',
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'please enter email';
+                    return 'Please enter an email';
                   } else {
                     return null;
                   }
@@ -135,8 +140,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   email = value;
                 },
                 initialValue: email, // Pre-fill the email field
-
-                decoration: InputDecoration(labelText: 'Enter Email Address'),
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                  labelText: 'Enter Email Address',
+                  labelStyle: TextStyle(color: Colors.white),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                ),
               ),
             ),
             Padding(
@@ -144,7 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: TextFormField(
                 validator: (value) {
                   if (value!.isEmpty) {
-                    return 'please enter email';
+                    return 'Please enter a password';
                   } else {
                     return null;
                   }
@@ -153,8 +164,15 @@ class _LoginScreenState extends State<LoginScreen> {
                   password = value;
                 },
                 initialValue: password, // Pre-fill the password field
-
-                decoration: InputDecoration(labelText: 'Enter Password'),
+                style: TextStyle(color: Colors.white),
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'Enter Password',
+                  labelStyle: TextStyle(color: Colors.white),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                ),
               ),
             ),
             SizedBox(
@@ -179,29 +197,47 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: MediaQuery.of(context).size.width - 40,
                 height: 50,
                 decoration: BoxDecoration(
-                    color: Colors.yellow,
-                    borderRadius: BorderRadius.circular(10)),
+                  color: Colors.yellow,
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: Center(
-                    child: Text(
-                  'Login',
-                  style: TextStyle(letterSpacing: 5, color: Colors.white),
-                )),
+                  child: Text(
+                    'Login',
+                    style: TextStyle(
+                      letterSpacing: 5,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Need An Account'),
+                Text(
+                  'Need an account? ',
+                  style: TextStyle(color: Colors.white),
+                ),
                 TextButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: ((context) {
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: ((context) {
                         return BuyerRegisterScreen();
-                      })));
-                    },
-                    child: Text('Register'))
+                      })),
+                    );
+                  },
+                  child: Text(
+                    'Register',
+                    style: TextStyle(
+                      color: Colors.yellow,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),

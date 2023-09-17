@@ -29,7 +29,7 @@ class StoreScreen extends StatelessWidget {
         }
 
         return Container(
-          height: 500,
+          height: 700,
           child: ListView.builder(
               itemCount: snapshot.data!.size,
               itemBuilder: (context, index) {

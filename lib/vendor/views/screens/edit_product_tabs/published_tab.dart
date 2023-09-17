@@ -63,7 +63,7 @@ class PublishedTab extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Text(
-                                  '\$' +
+                                  '\₹' +
                                       ' ' +
                                       vendorProductData['productPrice']
                                           .toStringAsFixed(2),

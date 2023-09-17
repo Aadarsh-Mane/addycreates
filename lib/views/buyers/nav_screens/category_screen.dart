@@ -15,7 +15,7 @@ class CategoryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 1,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.cyan,
         title: Text(
           'Categories',
           style: TextStyle(
@@ -39,25 +39,41 @@ class CategoryScreen extends StatelessWidget {
           }
 
           return Container(
-            height: 500,
+            height: 700,
             child: ListView.builder(
                 itemCount: snapshot.data!.docs.length,
                 itemBuilder: (context, index) {
                   final categoryData = snapshot.data!.docs[index];
                   return Padding(
                     padding: const EdgeInsets.only(top: 10),
-                    child: ListTile(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return AllProductScreen(
-                            categoryData: categoryData,
-                          );
-                        }));
-                      },
-                      leading: Image.network(categoryData['image']),
-                      title: Text(
-                        categoryData['categoryName'],
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            // color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
+                      ),
+                      child: ListTile(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return AllProductScreen(
+                              categoryData: categoryData,
+                            );
+                          }));
+                        },
+                        leading: Image.network(categoryData['image']),
+                        title: Text(
+                          categoryData['categoryName'],
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   );

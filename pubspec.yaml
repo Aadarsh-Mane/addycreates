@@ -59,6 +59,10 @@ dependencies:
   animated_bottom_navigation_bar: ^1.2.0
   firebase_messaging: ^14.6.3
   flutter_local_notifications: ^14.1.1
+  geolocator: ^9.0.2
+  geocoding: ^2.1.0
+  shimmer: ^3.0.0
+  connectivity_plus: ^4.0.1
   
 
 dev_dependencies:
